@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <title>인터넷 개론</title>
-    </head>
+<html>
+
+<head>
+    <title>메일링 리스트 가입</title>
+</head>
+
+<body>
+
+    <h1>메일링 리스트 가입</h1>
+
+    <form action="#" method="post">
+ 
+
+        <fieldset>
+            <legend>회원 정보 </legend>
+
+            <label for="username">사용자 이름:</label>
+            <input type="text" name="username" id="username" required /><br />
+
+            <label for="email" name>사용자 이메일:</label>
+            <input type="eamil" name="email" id="email" required /><br />
+
+            <label for="password">비밀번호:</label>
+            <input type="password" name="password" id="password"required /><br />
+            
+            <label for="password_confirm">비밀번호 확인</label>
+            <input type="password" name="password_confirm" id="password_confirm" />
+            <br />
+
+            <label>성별</label>
+            <input type="radio" name="gender" id="male" value="M" checked />
+            <label for="male">남성</label>
+            <input type="radio" name="gender" id="female" value="F" />
+            <label for="female">여성</label><br />
+
+
+            <input type="checkbox" name="terms" id="terms" required />
+            <label for="terms">로봇이 아닙니다.</label><br />
+
+    
+            <input type="submit" value="가입하기" />
+        </fieldset>
+    </form>
+
+    <h3>목록으로 돌아가기</h3>
     <ol>
-        <li> <a href="/인터넷개론/정의와 역사.html"
-            title="정의와 역사">정의와 역사</a></li>
-        <li> <a href="/인터넷개론/특징과 영향.html"
-                title="특징과 영향">특징과 영향</a></li>
-        <li> <a href="/인터넷개론/국가별 속도.html"
-            title="국가별 속도">국가별 속도</a></li>
+        <li><a href="/인터넷개론/정의와 역사.html" title="정의와 역사">정의와 역사</a></li>
+        <li><a href="/인터넷개론/특징과 영향.html" title="특징과 영향">특징과 영향</a></li>
+        <li><a href="/인터넷개론/국가별 속도.html" title="국가별 속도">국가별 속도</a></li>
     </ol>
+</body>
+
 </html>
