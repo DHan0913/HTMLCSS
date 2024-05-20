@@ -33,6 +33,7 @@
             font-size: 200%;
         }
 
+          /* 상대 단위 : em (배수) */
         #text-em > li:first-child {
 
         }
@@ -47,6 +48,11 @@
             font-size: 2.0em;
         }
 
+           /* 상대 단위 : rem (배수) */
+           /*
+                em : 부모의 size 기준
+                rem : 최상위 요소의 size 기준
+            */
         #text-rem > li:first-child {
 
         }
@@ -59,6 +65,39 @@
         }
         #text-rem > li:last-child {
             font-size: 2.0rem;
+        }
+        /* 표시 용도의 css */
+        div[class] {
+            border: 1px solid red;
+        }
+
+        /* 픽셀 단위 */
+        .pixel-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+
+        .percent-box {
+            height: 100px;
+            width: 50%; /* 상대 단위 */
+            background-color: lightgreen;
+            margin-bottom: 10px; 
+        }
+        /* 백분율 단위 */
+        .em-box {
+            height: 5em;
+            width: 10em;
+            background-color: lightcoral;
+            margin-bottom: 10px;
+        }
+        /* rem 단위 */
+        .rem-box {
+            width: 10rem;
+            height: 5rem;
+            background-color: lightyellow;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -87,7 +126,8 @@
         </ul>
 
         <h3>em</h3>
-        <ul id="text-em">
+        <ul id="text-em"
+        style="font-size: 20px;">
             <li>em 단위로 크기를 지정해 봅시다 (브라우저 기본값)</li>
             <li>em 단위로 크기를 지정해 봅시다</li>
             <li>em 단위로 크기를 지정해 봅시다</li>
@@ -95,7 +135,8 @@
         </ul>
 
         <h3>rem</h3>
-        <ul id="text-rem">
+        <ul id="text-rem"
+        style="font-size: 20px;">
             <li>rem 단위로 크기를 지정해 봅시다 (브라우저 기본값)</li>
             <li>rem 단위로 크기를 지정해 봅시다</li>
             <li>rem 단위로 크기를 지정해 봅시다</li>
@@ -106,8 +147,10 @@
     <h2>Box</h2>
     <div class="pixel-box">픽셀(px) 단위</div>
     <div class="percent-box">백분율(%) 단위</div>
-    <div class="em-box">em 단위</div>
-    <div class="rem-box">rem 단위</div>
+    <div class="parent"
+        style="font-size: 20px;">
+        <div class="em-box">em 단위</div>
+        <div class="rem-box">rem 단위</div>
 </body>
 
 </html>
